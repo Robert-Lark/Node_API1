@@ -1,5 +1,5 @@
 const express = require("express")
-const db = require("./database")
+const db = require("./database_Lecture_Version")
 //instantiate an express server instance
 const server = express()
 
@@ -52,7 +52,7 @@ server.put("/users/:id", (req, res) => {
         	const updatedUser = db.updateUser(id, {
         name: req.body.name,
             })
-            res.json(updaterUser)
+            res.json(updatedUser)
         }
      else {
 		res.status(404).json({
